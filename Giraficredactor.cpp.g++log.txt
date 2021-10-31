@@ -1,0 +1,74 @@
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:4:7: warning: 'class AbstractWindow' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+ class AbstractWindow
+       ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:23:100: warning: converting to non-pointer type 'COLORREF {aka long unsigned int}' from NULL [-Wconversion-null]
+     AbstractWindow (int x, int y, int width, int height, const char* text = NULL, COLORREF Color = NULL, int Activity = 1);
+                                                                                                    ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:26:7: warning: 'class CanvasWindow' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+ class CanvasWindow : public AbstractWindow
+       ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:35:7: warning: 'class ColorChangerWindow' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+ class ColorChangerWindow : public AbstractWindow
+       ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:46:7: warning: 'class ClearButWindow' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+ class ClearButWindow : public AbstractWindow
+       ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:57:7: warning: 'class ColorButWindow' has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+ class ColorButWindow : public AbstractWindow
+       ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In constructor 'CanvasWindow::CanvasWindow(int, int, int, int, const char*)':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:30:27: warning: converting to non-pointer type 'COLORREF {aka long unsigned int}' from NULL [-Wconversion-null]
+     using AbstractWindow::AbstractWindow;
+                           ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In function 'int main()':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:75:65: note: synthesized method 'CanvasWindow::CanvasWindow(int, int, int, int, const char*)' first required here 
+     CanvasWindow       Canvas        (110,   0, 690, 690,   NULL);
+                                                                 ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:83:85: warning: passing NULL to non-pointer argument 6 of 'ClearButWindow::ClearButWindow(int, int, int, int, const char*, COLORREF, CanvasWindow*)' [-Wconversion-null]
+     ClearButWindow     Clearing      ( 10, 230, 100, 100, "Clear.bmp", NULL, &Canvas);
+                                                                                     ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:84:86: warning: passing NULL to non-pointer argument 6 of 'ColorButWindow::ColorButWindow(int, int, int, int, const char*, COLORREF, ColorChangerWindow*)' [-Wconversion-null]
+     ColorButWindow     ShowColorButs ( 10, 110, 100, 100, "Color.bmp", NULL, ColorBut);
+                                                                                      ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: At global scope:
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:186:5: warning: unused parameter 'MouseX' [-Wunused-parameter]
+ int ColorChangerWindow::Action (int MouseX, int MouseY)
+     ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:186:5: warning: unused parameter 'MouseY' [-Wunused-parameter]
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:195:5: warning: unused parameter 'MouseX' [-Wunused-parameter]
+ int ClearButWindow::Action (int MouseX, int MouseY)
+     ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:195:5: warning: unused parameter 'MouseY' [-Wunused-parameter]
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In member function 'virtual int ColorButWindow::Action(int, int)':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:213:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: At global scope:
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:205:5: warning: unused parameter 'MouseX' [-Wunused-parameter]
+ int ColorButWindow::Action (int MouseX, int MouseY)
+     ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:205:5: warning: unused parameter 'MouseY' [-Wunused-parameter]
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In constructor 'AbstractWindow::AbstractWindow(int, int, int, int, const char*, COLORREF, int)':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:224:118: warning: declaration of 'Activity' shadows a member of 'this' [-Wshadow]
+ AbstractWindow::AbstractWindow (int x, int y, int width, int height, const char* imgTxt, COLORREF Color, int Activity) :
+                                                                                                                      ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:224:118: warning: declaration of 'Color' shadows a member of 'this' [-Wshadow]
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In constructor 'ColorChangerWindow::ColorChangerWindow(int, int, int, int, const char*, COLORREF, CanvasWindow*)':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:235:136: warning: declaration of 'Color' shadows a member of 'this' [-Wshadow]
+ ColorChangerWindow::ColorChangerWindow (int x, int y, int width, int height, const char* imgTxt, COLORREF Color, CanvasWindow* ColorWin) :
+                                                                                                                                        ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In constructor 'ClearButWindow::ClearButWindow(int, int, int, int, const char*, COLORREF, CanvasWindow*)':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:240:125: warning: declaration of 'Color' shadows a member of 'this' [-Wshadow]
+ ClearButWindow::ClearButWindow (int x, int y, int width, int height, const char* imgTxt, COLORREF Color, CanvasWindow* Clear) :
+                                                                                                                             ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In constructor 'ColorButWindow::ColorButWindow(int, int, int, int, const char*, COLORREF, ColorChangerWindow*)':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:245:135: warning: declaration of 'Color' shadows a member of 'this' [-Wshadow]
+ ColorButWindow::ColorButWindow (int x, int y, int width, int height, const char* imgTxt, COLORREF Color, ColorChangerWindow* ColorMass) :
+                                                                                                                                       ^
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp: In function 'void Drawer()':
+C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp:124:6: warning: function might be candidate for attribute 'noreturn' [-Wsuggest-attribute=noreturn]
+ void Drawer ()
+      ^
+---------------------------------------------------------------------------------------------
+[11.07.2021 12:44:47,78 C:\Users\Mihail@DESKTOP-TSG3IAB, returned 0]
+C:\Users\Mihail\Desktop\c++\Redactor> g++.exe "C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.cpp" -o C:\Users\Mihail\Desktop\c++\Redactor\Giraficredactor.exe  -O3 -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC

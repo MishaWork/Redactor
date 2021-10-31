@@ -1,0 +1,148 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe, файл: C:\Users\Misha\Desktop\TX\TXLib.h, строка: 13605, функция: HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "filename && *filename".
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRe0, Thread: 0x11B8 (Main), GetLastError(): 160 (Неверны один или несколько аргументов). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004227B0 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: txLoadImage() at C:/Users/Misha/Desktop/TX/TXLib.h (13605)
+
+# 1 0x0042DC38 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: Action() at //vmware-host/Shared Folders/Downloads/Giraficredactor (1).cpp (334):
+
+    332:     //printf ("\n" "GetOpenFileName() returned: fileName = \"%s\"\n", fileName);
+    333: 
+=>  334:     HDC OpPhoto = txLoadImage (fileName_);
+    335:     if (OpPhoto == NULL) txMessageBox ("Долбит атмос");
+    336: 
+
+# 2 0x0042E249 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: ActionMang() at //vmware-host/Shared Folders/Downloads/Giraficredactor (1).cpp (451):
+
+    449:                 if (MangMass [i] -> Activity_ == 1)
+    450:                     {
+=>  451:                     if (MangMass [i]->Action (MouseX, MouseY) == 1)
+    452:                         {
+    453:                         txDisableAutoPause ();
+
+# 3 0x0042D409 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: main() at //vmware-host/Shared Folders/Downloads/Giraficredactor (1).cpp (176):
+
+    174:     printf ("file%s\n", FileOP.fileName_);
+    175: 
+=>  176:     DrawMang.ActionMang ();
+    177: 
+    178:     txSaveImage ("JopaSruchkoy.bmp");
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int) at C:\Users\Misha\Desktop\TX\TXLib.h (13605):
+
+  13603:                  unsigned imageFlags /*= IMAGE_BITMAP*/, unsigned loadFlags /*= LR_LOADFROMFILE*/)
+  13604:     {
+=>13605: $1  if (_TX_ARGUMENT_FAILED (filename && *filename)) return NULL;
+  13606: 
+  13607: $   HBITMAP image = (HBITMAP) Win32::LoadImage ((loadFlags & LR_LOADFROMFILE)? NULL : GetModuleHandle (NULL),
+
+# 1 in virtual int FileOpenWindow::Action(int, int) at \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).cpp (334):
+
+    332:     //printf ("\n" "GetOpenFileName() returned: fileName = \"%s\"\n", fileName);
+    333: 
+=>  334:     HDC OpPhoto = txLoadImage (fileName_);
+    335:     if (OpPhoto == NULL) txMessageBox ("Долбит атмос");
+    336: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Misha\Desktop\TX\TXLib.h
+Compiled:	Oct 31 2021 10:18:14, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 31 2021 10:18:32
+
+Run file:	\\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe
+Directory:	\\vmware-host\Shared Folders\Downloads
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe, файл: C:\Users\Misha\Desktop\TX\TXLib.h, строка: 13605, функция: HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "filename && *filename".
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRe0, Thread: 0x8B0 (Main), GetLastError(): 160 (Неверны один или несколько аргументов). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004227B0 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: txLoadImage() at C:/Users/Misha/Desktop/TX/TXLib.h (13605)
+
+# 1 0x0042DCC6 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: Action() at //vmware-host/Shared Folders/Downloads/Giraficredactor (1).cpp (336):
+
+    334:     //printf ("\n" "GetOpenFileName() returned: fileName = \"%s\"\n", fileName);
+    335: 
+=>  336:     HDC OpPhoto = txLoadImage (fileName_);
+    337:     if (OpPhoto == NULL) txMessageBox ("Долбит атмос");
+    338: 
+
+# 2 0x0042E2D7 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: ActionMang() at //vmware-host/Shared Folders/Downloads/Giraficredactor (1).cpp (453):
+
+    451:                 if (MangMass [i] -> Activity_ == 1)
+    452:                     {
+=>  453:                     if (MangMass [i]->Action (MouseX, MouseY) == 1)
+    454:                         {
+    455:                         txDisableAutoPause ();
+
+# 3 0x0042D409 in \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe: main() at //vmware-host/Shared Folders/Downloads/Giraficredactor (1).cpp (176):
+
+    174:     printf ("file%s\n", FileOP.fileName_);
+    175: 
+=>  176:     DrawMang.ActionMang ();
+    177: 
+    178:     txSaveImage ("JopaSruchkoy.bmp");
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int) at C:\Users\Misha\Desktop\TX\TXLib.h (13605):
+
+  13603:                  unsigned imageFlags /*= IMAGE_BITMAP*/, unsigned loadFlags /*= LR_LOADFROMFILE*/)
+  13604:     {
+=>13605: $1  if (_TX_ARGUMENT_FAILED (filename && *filename)) return NULL;
+  13606: 
+  13607: $   HBITMAP image = (HBITMAP) Win32::LoadImage ((loadFlags & LR_LOADFROMFILE)? NULL : GetModuleHandle (NULL),
+
+# 1 in virtual int FileOpenWindow::Action(int, int) at \\vmware-host\Shared Folders\Downloads\Giraficredactor (1).cpp (336):
+
+    334:     //printf ("\n" "GetOpenFileName() returned: fileName = \"%s\"\n", fileName);
+    335: 
+=>  336:     HDC OpPhoto = txLoadImage (fileName_);
+    337:     if (OpPhoto == NULL) txMessageBox ("Долбит атмос");
+    338: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Misha\Desktop\TX\TXLib.h
+Compiled:	Oct 31 2021 10:23:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 31 2021 10:23:42
+
+Run file:	\\vmware-host\Shared Folders\Downloads\Giraficredactor (1).exe
+Directory:	\\vmware-host\Shared Folders\Downloads
+
+--------------------------------------------------
